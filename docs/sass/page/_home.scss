@@ -1,0 +1,38 @@
+// .input__group{
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-top: 85px;
+// }
+
+.chevron-down{
+    height: 10px;
+    width: 16px;
+    display: block;
+    border: none;
+    color: global.$white;
+    font-size: global.$fontSizeSmall;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.chevron-up{
+    display: none;
+    cursor: pointer;
+    position: relative;
+    left: 613px;
+    bottom: 39px;
+    @media screen and (max-width: 710px){
+        left: 259px;
+    }
+}
+
+
+
+@media screen and (max-width: 385px){
+    .chevron-up{
+        left: 126px;
+        bottom: 0;
+    }
+}

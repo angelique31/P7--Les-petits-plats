@@ -1,0 +1,17 @@
+header{
+    img{
+    display: block;
+    margin: auto;
+    width: 51px;
+    height: 46px;
+    }
+
+    h1{
+    text-align: center;
+    color: global.$secondaryDarken;
+    font-size: 2em;
+    font-weight: global.$bold;
+    line-height: 46px;
+    margin-bottom: 17px;
+    }
+}

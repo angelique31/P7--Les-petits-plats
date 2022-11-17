@@ -1,0 +1,122 @@
+.section_recipe{
+    margin-top: 100px;
+    .no-result{
+        margin: auto;
+        padding-top: 10px;
+        font-size: 1.2em;
+        text-align: center;
+        font-style: italic;
+    }
+}
+
+.recipe__section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 20px;
+}
+
+.recipe{
+    min-width: 300px;
+    max-width: 450px;
+    min-height: 364px;
+    max-height: 400px;
+    height: 500px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 5px;
+    background-color: global.$grey;
+    &__picture{
+        background-color: global.$darkgrey;
+        height: 178px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px 5px 0px 0px;
+        &--name{
+            height: 178px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info{
+        padding: 20px;
+        overflow: hidden;
+    }
+    &__details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &--title{
+            margin-bottom: 20px;
+            font-size: global.$fontSizeSmall;
+            font-family: global.$font1; 
+            font-weight: 400;
+            width: 65%;
+        }
+        &--time{
+            font-size: global.$fontSizeSmall;
+            font-weight: global.$bold;
+            align-items: center;
+            display: flex;
+            margin-bottom: 20px;
+            gap: 10px;
+            font-family:  global.$font1; 
+        }
+    }
+    &__text{
+        display: flex;
+        gap: 15px;
+        &--ingredients{
+            font-size: 0.75rem;
+            width: 50%;
+            font-family:  global.$font1; 
+        }
+        &--description{
+            text-align: justify;
+            width: 50%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 7;
+            font-family: global.$font2;
+            font-size: 0.75rem;
+        }
+        
+    }
+}
+
+/************Responsive**********/
+
+@media screen and (max-width: 1035px){
+     .recipe__section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 710px){
+    .recipe__section{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .section_recipe {
+        margin-top: 324px;
+    }
+    .input-appliances{
+        top: 422px;
+        left: 48px;
+    }
+
+    .input-ustensils{
+        top: 533px;
+        left: 48px;
+    }
+   
+}

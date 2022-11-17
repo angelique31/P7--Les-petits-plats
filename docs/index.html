@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <link href="./main.css" rel="stylesheet" type="text/css">
+    <title>Les petits plats, site de recettes de cuisine</title>
+    <meta name="description" content="Les petits plats par openclassrooms. Site de recettes de cuisine">
+    <link rel="shortcut icon" href="./assets/icons/logo.svg">
+    <script src="https://kit.fontawesome.com/0b6d538c32.js" crossorigin="anonymous"></script>
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="./assets/icons/logo.svg" alt="logo les petits plats">
+        <h1>Les petits plats</h1>
+    </header>
+
+    <nav>
+        <input type="search" id="search_input" placeholder="Rechercher une recette" >
+        <img src="./assets/icons/loupe.svg" alt="loupe pour rechercher un ingrédient">
+    </nav>
+
+    <aside>
+        <div class="container_selected"  id="container_selected">
+            <div id="selected__tag"></div>
+        </div>
+    </aside>
+
+    <div class="selection">
+        <div class="selection__options">
+          <button class="selection__button ingredient_button" id="ingredient_button">Ingredients 
+            <img class="chevron-down" id="chevron-down-ingredient" src="./assets/icons/chevron-down.svg" alt="chevron d'ouverture de l'input ingrédient">
+          </button>
+          <div class="selection_options_ingredients" id="ingredient-list">
+            <div class="selection_button_ingredients">
+              <input type="text" class="ingredient-list"  placeholder="Rechercher un ingrédient">
+              <img class="chevron-up" id="chevron-up-ingredient" src="./assets/icons/chevron-up.svg" alt="chevron de fermeture de l'input ingrédient">
+            </div>
+            
+            <ul  class="ingredient-list-menu" id="ingredient-list-menu" ></ul>
+          </div>
+          
+          <button class="selection__button appliance_button" id="appliance_button">Appareils
+            <img class="chevron-down" id="chevron-down-appliance" src="./assets/icons/chevron-down.svg" alt="chevron d'ouverture de l'input appareil">
+          </button>
+          <div class="selection_options_appliance" id="appliance-list">
+            <div class="selection_button_appliance">
+              <input type="text" class="appliance-list" placeholder="Rechercher un appareil">
+              <img class="chevron-up" id="chevron-up-appliance" src="./assets/icons/chevron-up.svg" alt="chevron de fermeture de l'input appareil">
+            </div>
+            <ul  class="appliance-list-menu" id="appliance-list-menu"></ul>
+          </div>
+
+          <button class="selection__button ustensil_button" id="ustensil_button">Ustensiles 
+            <img class="chevron-down" id="chevron-down-ustensils" src="./assets/icons/chevron-down.svg" alt="chevron d'ouverture de l'input ustensil">
+          </button>
+          <div class="selection_options_utensils" id="ustensil-list">
+            <div class="selection_button_utensils">
+              <input type="text" class="ustensil-list" placeholder="Rechercher un ustensile">
+              <img class="chevron-up" id="chevron-up-ustensils" src="./assets/icons/chevron-up.svg" alt="chevron de fermeture de l'input ustensils">
+            </div>
+            <ul  class="ustensil-list-menu" id="ustensil-list-menu"></ul>
+          </div>
+        </div>
+      </div>
+        
+        
+
+    <section class="section_recipe">
+        <span id="no-result" class="no-result">Aucune recette ne correspond à votre critère... vous pouvez chercher "tarte aux pommes", "poisson", etc.</span>
+        <div class="recipe__section">
+        
+        </div>
+        
+    </section>
+
+    <!-- <script src="/docs/js/index.js"></script>     -->
+</body>
+</html>

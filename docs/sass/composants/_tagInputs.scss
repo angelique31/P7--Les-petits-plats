@@ -1,0 +1,163 @@
+.selection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    &__options{
+        display: flex;
+        position: relative;
+        margin-top: 10px;
+        gap: 30px;
+        @media screen and (max-width: 700px){
+            flex-direction: column;
+        }
+    }
+}
+
+.selection__button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    width: 10vw;
+    height: 6vh;
+    border: none;
+    color: global.$white;
+    font-weight: bold;
+}
+
+.selection_options_ingredients,
+.selection_options_appliance,
+.selection_options_utensils{
+    display: none;
+    z-index: 2;
+}
+
+.selection_button_ingredients{
+    background-color: global.$primary;
+}
+
+.selection_button_appliance{
+    background-color: global.$tertiary;
+}
+
+.selection_button_utensils{
+    background-color: global.$secondary;
+}
+
+.ingredient-list,
+.appliance-list,
+.ustensil-list{
+    display: none;
+    width: 25vw;
+    background-color: global.$primary;
+    font-size: 1.1rem;
+    color: global.$white;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    padding: 1% 2%;
+    width: 667px;
+    border-radius: 5px 5px 0 0;
+    height: 70px;
+    opacity: 50%;
+    @media screen and (max-width: 700px){
+        width: 100%;
+    }
+    &::placeholder{
+        color: global.$white;
+        font-weight: global.$bold;
+        font-size: global.$fontSizeSmall;
+    }
+}
+
+.appliance-list{
+    background-color: global.$tertiary;
+}
+
+.ustensil-list{
+    background-color: global.$secondary;
+}
+
+
+.ingredient-list-menu,
+.appliance-list-menu,
+.ustensil-list-menu{
+    display: flex;
+    padding: 15px;
+    width: 667px;
+    min-width: 170px;
+    flex-wrap: wrap;
+    gap: 60px;
+    list-style-type: none;
+    background-color: global.$primary;
+    color: global.$white;
+    font-weight: bold;
+    max-height: 397px;
+    overflow-y: auto;
+    border-radius: 0 0 5px 5px;
+    text-overflow: ellipsis;
+    position: absolute;
+    column-count: 3;
+    @media screen and (max-width: 700px){
+        width: 100%;
+    }
+    li{
+        line-height: 30px;
+        font-family: global.$font1;
+        font-size: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+        @media screen and (max-width: 700px){
+            font-size: 0.8rem;
+        }
+        @media screen and (max-width: 385px){
+            font-size: 0.7rem;
+            margin-right: 0px;
+        }
+    }
+    
+}
+
+.appliance-list-menu{
+    background-color: global.$tertiary;
+}
+
+.ustensil-list-menu{
+    background-color: global.$secondary;
+}
+
+.ingredient_button,
+.appliance_button,
+.ustensil_button{
+    border: none;
+    color: global.$white;
+    font-weight: global.$bold;
+    font-size: global.$fontSizeSmall;
+    outline: none;
+    padding: 0 15px;
+    height: 70px;
+    width: 170px;
+    cursor: pointer;
+    @media screen and (max-width: 700px){
+        margin: auto;
+        width: 100%;
+    }
+    &::placeholder{
+        color: global.$white;
+        font-weight: global.$bold;
+        font-size: global.$fontSizeSmall;
+    }
+}
+
+.ingredient_button{
+    background-color: global.$primary;
+}
+
+.appliance_button{
+    background-color: global.$tertiary;
+}
+
+.ustensil_button{
+    background-color: global.$secondary;
+}

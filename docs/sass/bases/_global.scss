@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    margin: 50px;
+}
+
+/***********************VARIABLES******************/
+$font1 : 'Lato', sans-serif;
+$font2 : 'Roboto', sans-serif;
+
+$white: white;
+$grey: #E7E7E7;
+$darkgrey: #C7BEBE;
+
+$primary : #3282F7;
+$secondary : #ED6454;
+$secondaryDarken : #D04F4F;
+$tertiary:#68D9A4;
+
+$bold: 700;
+$fontSizeSmall: 1.1rem;
+
