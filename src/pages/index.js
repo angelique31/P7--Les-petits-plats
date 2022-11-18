@@ -1,5 +1,6 @@
 import { getRecipes } from '../utils/api';
-import { ingredientSelected, applianceSelected,  ustensilSelected} from '../components/tagInputLists';
+import ingredientSelected from '../components/filters/filtersList/filtersList';
+import { applianceSelected,  ustensilSelected} from '../components/tagInputLists';
 import { } from '../components/tagsInput';
 import { searchButtonsInput } from '../utils/search';
 import displayRecipes from '../components/recipes';

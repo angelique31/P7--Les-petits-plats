@@ -40,9 +40,7 @@ export const ingredientSelected =  (recipes) => {
     };
     getInputs();
 
-    let ingredientListMenu = document.querySelector('#ingredient-list-menu');
-    ingredientListMenu.innerHTML = ingredientSort.map((name, index)=>`<li class="ingredient" id="ingredient-${index}">${name}</li>`).join (' ');
-    // console.log(ingredientListMenu);	
+    
 };
 
 /**

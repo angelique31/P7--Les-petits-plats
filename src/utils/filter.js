@@ -1,6 +1,6 @@
 import configFilters from '../configs/filters';
 import { formatText } from './format';
-import  { displayRecipe } from '../pages/index';
+import  { displayRecipes } from '../pages/index';
 import { applianceSelected, ingredientSelected, ustensilSelected } from '../components/tagInputLists';
 import { searchButtonsInput } from './search';
 
@@ -125,10 +125,10 @@ export const getRecipes = (recipes, filters) => {
  * Affiche les données dans le DOM
  * @param {array} recipes
  */
-const getDisplay = (recipes) => {
-    // console.log('getDisplay params', recipes);
-    displayRecipe (recipes);
-};
+// const getDisplay = (recipes) => {
+//     // console.log('getDisplay params', recipes);
+//     displayRecipes(recipes);
+// };
 
 /**
  * Affiche les ingrédients filtrés dans l'input ingredient
@@ -156,7 +156,7 @@ const searchByfilters = (recipes) => {
     // console.log(filters)
     const recipesFilters = getRecipes(recipes, filters);
     // console.log(recipesFilters);
-    getDisplay(recipesFilters);
+    // getDisplay(recipesFilters);
     updateInput(recipesFilters);
     updateButtonsInput();
 };

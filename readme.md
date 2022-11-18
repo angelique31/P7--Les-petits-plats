@@ -18,4 +18,4 @@ Après avoir cloné le projet, il suffit d'ouvrir le fichier ./doc/index.html, p
 - Utiliser l’outil de comparaison de performance Jsben.ch 
 
 ## Lien du site 
-Voici le lien du site vià github pages : https://angelique31.github.io/les-petits-plats/
+Voici le lien du site vià github pages : https://angelique31.github.io/les-petits-plats-version2/
