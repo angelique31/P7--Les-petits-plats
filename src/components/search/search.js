@@ -11,7 +11,7 @@ function search (recipes) {
     let result = [];
     const filterData = (e) => {
         const inputLetters = formatText(e.target.value);
-        console.log(inputLetters);
+        // console.log(inputLetters);
         if (inputLetters.length > 2 ) {
             const filterIngredients = (ingredients) => {
                 return ingredients.find(item => formatText(item.ingredient).includes(inputLetters));

@@ -12,7 +12,7 @@ export const searchButtonsInput = (recipes) => {
     let arrayResult = [];
     const filterDataInput = (e) => {
         const lettersInput = formatText(e.target.value);
-        console.log(lettersInput);
+        // console.log(lettersInput);
         if (lettersInput.length >= 1) {
             const filterIngredients = (ingredients) => {
                 return ingredients.find(item => formatText(item.ingredient).includes(lettersInput));
