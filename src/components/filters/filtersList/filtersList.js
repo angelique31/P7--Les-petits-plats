@@ -27,7 +27,7 @@ const filtersList = (recipes) => {
     // console.log(filter)
     let container = document.querySelector(filter.container);
     for (let j = 0; j < filter.values.length; j++) {
-        filtersItem(filter.values[j], container, j, filter.type);
+        filtersItem(filter.values[j], container, j, filter.type, recipes);
     // console.log(filter.values[j], container, j, filter.type);   
     }
   }

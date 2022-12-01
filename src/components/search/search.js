@@ -31,7 +31,7 @@ function search (recipes) {
                 return match;
                 
             });
-            // console.log(result);
+            console.log(result);
  
             
             displayRecipes(result); //fonction appelée qui permet le tri des cartes des recettes    

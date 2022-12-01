@@ -1,9 +1,10 @@
 import configFilters from '../configs/filters';
 import { formatText } from './format';
-import  { displayRecipes } from '../pages/index';
-import { applianceSelected, ingredientSelected, ustensilSelected } from '../components/tagInputLists';
-import { searchButtonsInput } from './search';
-
+// import  { displayRecipes } from '../pages/index';
+// import filtersList from '../filters/filtersList/filtersList';
+import { sortByIngredient, sortByAppliance, sortByUstensile } from '../utils/sort'
+// import { searchButtonsInput } from './search';
+import displayRecipes from '../components/recipes';
 
 
 /**
@@ -125,25 +126,26 @@ export const getRecipes = (recipes, filters) => {
  * Affiche les données dans le DOM
  * @param {array} recipes
  */
-// const getDisplay = (recipes) => {
-//     // console.log('getDisplay params', recipes);
-//     displayRecipes(recipes);
-// };
+const getDisplay = (recipes) => {
+    // console.log('getDisplay params', recipes);
+    displayRecipes(recipes);
+};
 
 /**
  * Affiche les ingrédients filtrés dans l'input ingredient
  * @param {*} recipes 
  */
 const updateInput = (recipes) => {
-    ingredientSelected(recipes);
-    applianceSelected(recipes);
-    ustensilSelected(recipes);
+    sortByIngredient(recipes);
+    sortByAppliance(recipes);
+    sortByUstensile(recipes);
+    filtersList(recipes)
     // console.log(recipes);
 };
 
-const updateButtonsInput = () => {
-    searchButtonsInput();
-};
+// const updateButtonsInput = () => {
+//     // searchButtonsInput();
+// };
 
 
 /**
@@ -151,14 +153,16 @@ const updateButtonsInput = () => {
  * @param {array} recipes
  */
 const searchByfilters = (recipes) => {
+    // console.log(recipes);
     //récupère les tags :
     const filters = getFilters();
     // console.log(filters)
     const recipesFilters = getRecipes(recipes, filters);
     // console.log(recipesFilters);
     // getDisplay(recipesFilters);
-    updateInput(recipesFilters);
-    updateButtonsInput();
+    // updateInput(recipesFilters);
+    // updateButtonsInput();
+    displayRecipes(recipesFilters);
 };
 
 export default searchByfilters;
