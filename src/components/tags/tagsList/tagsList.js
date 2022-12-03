@@ -3,16 +3,16 @@ import { closeTagAppliance, closeTagUstensil } from "../../closeTags";
 
 
 
-export const tagsListAppliance = () => {
-  const appliances = document.querySelectorAll('.appliance');
-  // console.log(appliances)
-  appliances.forEach(function (appliance) { 
-    appliance.addEventListener('click', () => {
-      tagsItemAppliance(appliance);
-      closeTagAppliance(idTag, idButton, recipes);
-    });
-  });
-}
+// export const tagsListAppliance = () => {
+//   const appliances = document.querySelectorAll('.appliance');
+//   // console.log(appliances)
+//   appliances.forEach(function (appliance) { 
+//     appliance.addEventListener('click', () => {
+//       tagsItemAppliance(appliance);
+//       closeTagAppliance(idTag, idButton, recipes);
+//     });
+//   });
+// }
 
 export const tagsListUstensil = () => {
   const ustensils = document.querySelectorAll('.ustensil');

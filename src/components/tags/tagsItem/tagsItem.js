@@ -40,7 +40,17 @@ export const tagsItemIngredient = (ingredient, recipes) => {
               </div>`;
   
   container.insertAdjacentHTML("beforeend", tag);
+  searchByfilters(recipes);
+
+  const actionClose = () => { 
+    const tagComponent = document.getElementById(idTag);
+    tagComponent.remove();
+    searchByfilters(recipes);
+  };
+    const tagButton = document.getElementById(idButton);
+    tagButton.addEventListener('click', actionClose);
 };
+
 
 /**
  * Fonction qui permet l'affichage d'un ustensil dans un tag
@@ -56,5 +66,14 @@ export const tagsItemIngredient = (ingredient, recipes) => {
                 </div>`;
   
   container.insertAdjacentHTML("beforeend", tag);
+  searchByfilters(recipes);
+
+  const actionClose = () => { 
+    const tagComponent = document.getElementById(idTag);
+    tagComponent.remove();
+    searchByfilters(recipes);
+  };
+    const tagButton = document.getElementById(idButton);
+    tagButton.addEventListener('click', actionClose);
 };
 
