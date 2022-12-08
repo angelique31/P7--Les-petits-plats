@@ -5,6 +5,8 @@ import { formatText } from './format';
 import { sortByIngredient, sortByAppliance, sortByUstensile } from '../utils/sort'
 // import { searchButtonsInput } from './search';
 import displayRecipes from '../components/recipes';
+import { tagsItemIngredient } from '../components/tags/tagsItem/tagsItem';
+import filtersList from '../components/filters/filtersList/filtersList';
 
 
 /**
@@ -135,13 +137,13 @@ const getDisplay = (recipes) => {
  * Affiche les ingrédients filtrés dans l'input ingredient
  * @param {*} recipes 
  */
-const updateInput = (recipes) => {
-    sortByIngredient(recipes);
-    sortByAppliance(recipes);
-    sortByUstensile(recipes);
-    filtersList(recipes)
-    // console.log(recipes);
-};
+// const updateInput = (recipes) => {
+//     sortByIngredient(recipes);
+//     sortByAppliance(recipes);
+//     sortByUstensile(recipes);
+//     // filtersList(recipes)
+//     // console.log(recipes);
+// };
 
 // const updateButtonsInput = () => {
 //     // searchButtonsInput();
@@ -153,16 +155,17 @@ const updateInput = (recipes) => {
  * @param {array} recipes
  */
 const searchByfilters = (recipes) => {
-    // console.log(recipes);
     //récupère les tags :
     const filters = getFilters();
-    // console.log(filters)
-    const recipesFilters = getRecipes(recipes, filters);
-    // console.log(recipesFilters);
-    // getDisplay(recipesFilters);
-    // updateInput(recipesFilters);
-    // updateButtonsInput();
-    displayRecipes(recipesFilters);
+    if (filters.length === 0) {
+        displayRecipes(recipes);
+        filtersList(recipes);
+    } else {
+        const recipesFilters = getRecipes(recipes, filters);
+        displayRecipes(recipesFilters);
+        filtersList(recipesFilters);
+    } 
+
 };
 
 export default searchByfilters;
