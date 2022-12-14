@@ -1,9 +1,9 @@
-import configFilters  from '../../../configs/filters';
+// import configFilters  from '../../../configs/filters';
 import searchByfilters from '../../../utils/filter';
 /**
  * Fonction qui permet l'affichage d'un ingrédient dans un tag
  */
-export const tagsItemIngredient = (ingredient, recipes, type, config) => {
+export const tagsItem = (ingredient, recipes, type, config) => {
   // console.log(config);
   const container = document.getElementById('selected__tag');
   const idTag = `tag-${type}-${ingredient.id}`;

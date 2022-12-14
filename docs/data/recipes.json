@@ -60,7 +60,7 @@
           "quantity": 5
         },
         {
-          "ingredient": "Lait de Coco",
+          "ingredient": "Lait de coco",
           "quantity": 100,
           "unit": "ml"
         }
@@ -209,7 +209,7 @@
           "unit": "cl"
         },
         {
-          "ingredient": "Sucre en Poudre",
+          "ingredient": "Sucre en poudre",
           "quantity": 100,
           "unit": "grammes"
         },
@@ -283,7 +283,7 @@
           "quantity": 2
         },
         {
-          "ingredient": "Sucre en Poudre",
+          "ingredient": "Sucre en poudre",
           "quantity": "110",
           "unit": "grammes"
         },
@@ -386,7 +386,7 @@
           "unit": "tranches"
         },
         {
-          "ingredient": "Pommes",
+          "ingredient": "Pomme",
           "quantity": 1
         },
         {
@@ -415,7 +415,7 @@
           "unit": "grammes"
         },
         {
-          "ingredient": "Pommes",
+          "ingredient": "Pomme",
           "quantity": 8
         },
         {
@@ -1668,7 +1668,7 @@
           "quantity": 2
         },
         {
-          "ingredient": "Kiwis",
+          "ingredient": "Kiwi",
           "quantity": 3
         },
         {

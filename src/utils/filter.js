@@ -1,11 +1,6 @@
 import configFilters from '../configs/filters';
 import { formatText } from './format';
-// import  { displayRecipes } from '../pages/index';
-// import filtersList from '../filters/filtersList/filtersList';
-import { sortByIngredient, sortByAppliance, sortByUstensile } from '../utils/sort'
-// import { searchButtonsInput } from './search';
 import displayRecipes from '../components/recipes';
-import { tagsItemIngredient } from '../components/tags/tagsItem/tagsItem';
 import filtersList from '../components/filters/filtersList/filtersList';
 
 
@@ -52,7 +47,6 @@ export const getFilters = () => {
         // console.log(span);
         const value = formatText(span.textContent);
         // console.log(value);
-        
         return value;
     };
     // container.children = les éléments enfants du container des tags
@@ -68,18 +62,13 @@ export const getFilters = () => {
 };
 
 /**
- * TODO
- * Etape 2 - faire la recherche en fonction des recettes et filtres
- */
-
-/**
  * Tri les recettes en fonction des filtres
  * @param {array} recipes
  * @param {array} filters
- * @return - recettes filtrées
+ * @return recettes filtrées
  */
 export const getRecipes = (recipes, filters) => {
-    // console.log('getRecipes params', recipes, filters);
+    // console.log(recipes, filters);
     // console.log(filters[0].value);
     let result = [];
 
@@ -114,44 +103,14 @@ export const getRecipes = (recipes, filters) => {
             result = result.concat(match);
         } 
     }
-    // console.log(result);
-   
-    return result;
+    
+    const resultSort = [...new Set(result)].sort();
+    console.log(resultSort);
+    return resultSort;
 };
 
 /**
- * TODO
- * Etape 3- afficher les recettes dans le DOM
- */
-
-/**
- * Affiche les données dans le DOM
- * @param {array} recipes
- */
-const getDisplay = (recipes) => {
-    // console.log('getDisplay params', recipes);
-    displayRecipes(recipes);
-};
-
-/**
- * Affiche les ingrédients filtrés dans l'input ingredient
- * @param {*} recipes 
- */
-// const updateInput = (recipes) => {
-//     sortByIngredient(recipes);
-//     sortByAppliance(recipes);
-//     sortByUstensile(recipes);
-//     // filtersList(recipes)
-//     // console.log(recipes);
-// };
-
-// const updateButtonsInput = () => {
-//     // searchButtonsInput();
-// };
-
-
-/**
- * Gère l'affichage des recettes
+ * Gère l'affichage des recettes filtrées
  * @param {array} recipes
  */
 const searchByfilters = (recipes) => {
@@ -162,10 +121,9 @@ const searchByfilters = (recipes) => {
         filtersList(recipes);
     } else {
         const recipesFilters = getRecipes(recipes, filters);
+        // console.log(recipesFilters)
         displayRecipes(recipesFilters);
         filtersList(recipesFilters);
     } 
-
 };
-
 export default searchByfilters;

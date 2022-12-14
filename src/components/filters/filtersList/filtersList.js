@@ -1,6 +1,8 @@
 import filtersItem from "../../filters/filtersItem/filtersItem";
 import { sortByIngredient, sortByAppliance, sortByUstensile } from "../../../utils/sort";
 import configFilter from "../../../configs/filters";
+import { getFilters } from "../../../utils/filter";
+import { formatText } from "../../../utils/format";
 /**
  *  On boucle sur les 3 filtres (ingredient, appareil et ustensil).
  *  Puis on itère sur un seul filtre
@@ -25,14 +27,26 @@ const filtersList = (recipes) => {
     },
   ];
   // console.log(filters);
+  const tags = getFilters();
+  // console.log(tags);
+  const tagsValues = [];
+  
+  for (let i = 0; i < tags.length; i++) {
+    tagsValues.push(tags[i].value);
+  }
+  // console.log(tagsValues)
   for (let i = 0; i < filters.length; i++) {
     const filter = filters[i];
     // console.log(filter)
     let container = document.querySelector(filter.container);
     container.innerHTML = '';
     for (let j = 0; j < filter.values.length; j++) {
-        filtersItem(filter.values[j], container, j, filter.type, recipes, filter.config);
-    // console.log(filter.values[j], container, j, filter.type);   
+        if(!tagsValues.includes(formatText(filter.values[j]))) {
+          // console.log(tags);
+          filtersItem(filter.values[j], container, j, filter.type, recipes, filter.config);
+          
+        }
+        
     }
   }
 

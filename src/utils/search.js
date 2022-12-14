@@ -1,5 +1,7 @@
-// import displayRecipes from '../pages/index';
+
 import { formatText } from '../utils/format';
+
+import filtersList from '../components/filters/filtersList/filtersList';
 
  const inputSearchIngredient = document.querySelector('.ingredient-list');
 /**
@@ -25,10 +27,8 @@ import { formatText } from '../utils/format';
                 return match;
                 
             });
-            console.log(arrayResult);
-            
-            
-            displayRecipes(arrayResult); //fonction appelée qui permet le tri des cartes des recettes    
+            // console.log(arrayResult);
+            filtersList(arrayResult);
             
         }
     };
