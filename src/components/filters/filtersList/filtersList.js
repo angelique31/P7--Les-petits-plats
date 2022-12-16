@@ -29,7 +29,7 @@ const filtersList = (recipes) => {
   // console.log(filters);
   const tags = getFilters();
   // console.log(tags);
-  const tagsValues = [];
+  const tagsValues = []; //Récupère la valeur du tag 
   
   for (let i = 0; i < tags.length; i++) {
     tagsValues.push(tags[i].value);
@@ -42,9 +42,8 @@ const filtersList = (recipes) => {
     container.innerHTML = '';
     for (let j = 0; j < filter.values.length; j++) {
         if(!tagsValues.includes(formatText(filter.values[j]))) {
-          // console.log(tags);
+          // console.log(filter.values[j]);
           filtersItem(filter.values[j], container, j, filter.type, recipes, filter.config);
-          
         }
         
     }

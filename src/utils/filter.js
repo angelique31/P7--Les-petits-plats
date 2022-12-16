@@ -5,7 +5,7 @@ import filtersList from '../components/filters/filtersList/filtersList';
 
 
 /**
- * Récupérer correctement les filtres
+ * Récupérer correctement les filtres.
  * Fonction qui récupère la valeur du tag.
  * On créé les types et valeurs des tags
  */
@@ -61,6 +61,7 @@ export const getFilters = () => {
     return filters;
 };
 
+
 /**
  * Tri les recettes en fonction des filtres
  * @param {array} recipes
@@ -68,26 +69,28 @@ export const getFilters = () => {
  * @return recettes filtrées
  */
 export const getRecipes = (recipes, filters) => {
-    // console.log(recipes, filters);
+    // console.log( recipes, filters);
     // console.log(filters[0].value);
     let result = [];
 
     const filterIngredients = (ingredients, value) => {
+        console.log(ingredients, value);
         return ingredients.find((item) =>
             formatText(item.ingredient).includes(value)
         );
     };
 
     const search = (value) => recipes.filter((recipe) => {
+        // console.log(value);
         const formatedRecipe = {
             name: formatText(recipe.name),
             ingredients: recipe.ingredients,
             description: formatText(recipe.description),
         };
-
+        // console.log(formatedRecipe, value);
         const match =
       formatedRecipe.name.includes(value) ||
-      filterIngredients(formatedRecipe.ingredients) ||
+      filterIngredients(formatedRecipe.ingredients, value) ||
       formatedRecipe.description.includes(value);
 
         return match;
@@ -97,17 +100,21 @@ export const getRecipes = (recipes, filters) => {
     for (let i = 0; i < filters.length; i++) {
         // console.log(filters);
         const value = filters[i].value;
-        
+        // console.log(value);
         const match = search (value);
+        // console.log(match);
         if (match && match[0]) {
             result = result.concat(match);
         } 
+        // console.log(result);
     }
     
     const resultSort = [...new Set(result)].sort();
-    console.log(resultSort);
+    // console.log(resultSort);
     return resultSort;
 };
+
+
 
 /**
  * Gère l'affichage des recettes filtrées
