@@ -5,7 +5,6 @@ import filtersList from '../components/filters/filtersList/filtersList';
 
 
 /**
- * Récupérer correctement les filtres.
  * Fonction qui récupère la valeur du tag.
  * On créé les types et valeurs des tags
  */
@@ -44,17 +43,13 @@ export const getFilters = () => {
    */
     const getValue = (tag) => {
         const span = tag.children[0];
-        // console.log(span);
         const value = formatText(span.textContent);
-        // console.log(value);
         return value;
     };
     // container.children = les éléments enfants du container des tags
     for (let i = 0; i < container.children.length; i++) {
         const tag = container.children[i];
-        // console.log(tag);
         let filter = { type: getType(tag.className), value: getValue(tag) };
-        // console.log(filter);
         filters.push(filter);
     }
     // console.log(filters);
@@ -63,31 +58,28 @@ export const getFilters = () => {
 
 
 /**
- * Tri les recettes en fonction des filtres
+ * Tri les recettes en fonction des filtres (des tags)
  * @param {array} recipes
  * @param {array} filters
  * @return recettes filtrées
  */
 export const getRecipes = (recipes, filters) => {
-    // console.log( recipes, filters);
-    // console.log(filters[0].value);
+    // console.log(filters);
     let result = [];
 
     const filterIngredients = (ingredients, value) => {
-        console.log(ingredients, value);
         return ingredients.find((item) =>
             formatText(item.ingredient).includes(value)
         );
     };
 
     const search = (value) => recipes.filter((recipe) => {
-        // console.log(value);
         const formatedRecipe = {
             name: formatText(recipe.name),
             ingredients: recipe.ingredients,
             description: formatText(recipe.description),
         };
-        // console.log(formatedRecipe, value);
+       
         const match =
       formatedRecipe.name.includes(value) ||
       filterIngredients(formatedRecipe.ingredients, value) ||

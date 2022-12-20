@@ -1,5 +1,5 @@
-// import configFilters  from '../../../configs/filters';
 import searchByfilters from '../../../utils/filter';
+
 /**
  * Fonction qui permet l'affichage d'un ingrédient dans un tag
  */

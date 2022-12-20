@@ -33,7 +33,6 @@ const openInputIngredient =  () => {
     ingredientListMenu.style.display = 'block';
     chevronUpIngredient.style.display = 'block';
     chevronDownIngredient.style.display = 'none';
-    // ingredient.style.width = ingredientList.style.width;
 };
 ingredient.addEventListener ('click', openInputIngredient);
 
@@ -46,7 +45,6 @@ const openInputAppliance = () => {
     applianceListMenu.style.display = 'block';
     chevronUpAppliance.style.display = 'block';
     chevronDownAppliance.style.display = 'none';
-    // appliance.style.width = appliancetList.style.width;
 };
 appliance.addEventListener ('click', openInputAppliance);
 
@@ -59,7 +57,6 @@ const openInputUstensil = () => {
     ustensilListMenu.style.display = 'block';
     chevronUpUstensils.style.display = 'block';
     chevronDownUstensils.style.display = 'none';
-    // inputUstensilList.style.display = 'block';
 };
 ustensils.addEventListener ('click', openInputUstensil);
 
@@ -74,8 +71,6 @@ const closeInputIngredient = () => {
     ingredientListMenu.style.display = 'none';
     chevronUpIngredient.style.display = 'none';
     chevronDownIngredient.style.display = 'block';
-    // ingredient.style.width = ingredientList.style.width = 'auto';
-
 };
 
 chevronUpIngredient.addEventListener ('click', closeInputIngredient);
@@ -89,7 +84,6 @@ const closeInputAppliance = () => {
     applianceListMenu.style.display = 'none';
     chevronUpAppliance.style.display = 'none';
     chevronDownAppliance.style.display = 'block';
-    // appliance.style.width = appliancetList.style.width = 'auto';
 };
 chevronUpAppliance.addEventListener ('click', closeInputAppliance);
 
@@ -106,16 +100,4 @@ const closeInputUstensils = () => {
 
 chevronUpUstensils.addEventListener ('click', closeInputUstensils);
 
-
-/*********************************************** */
-// const chevronIngredient = document.getElementById('chevron-ingredient');
-// function filterIngredient () {
-//     const isDisplay = chevronIngredient.style.display === 'block';
-
-//     if (isDisplay) {
-//         console.log('ferme');
-//     } else {
-//         console.log('ouvert');
-//     }
-// }
 

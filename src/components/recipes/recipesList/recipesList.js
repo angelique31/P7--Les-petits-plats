@@ -2,7 +2,7 @@ import recipesItem from "../recipesItem/recipesItem";
 import recipesNotFound from "../recipesNotFound/recipesNotFound";
 
 /**
- * Fonction qui permet l'affichage des cartes  
+ * Fonction qui gère l'affichage des cartes des recettes
  * @param {*} recipes 
  */
  function recipesList(recipes){
