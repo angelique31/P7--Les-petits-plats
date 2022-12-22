@@ -60,7 +60,7 @@
     width: 667px;
     border-radius: 5px 5px 0 0;
     height: 70px;
-    opacity: 50%;
+    opacity: 70%;
     @media screen and (max-width: 700px){
         width: 100%;
     }
@@ -142,6 +142,7 @@
     @media screen and (max-width: 700px){
         margin: auto;
         width: 100%;
+        justify-content: space-between;
     }
     &::placeholder{
         color: global.$white;

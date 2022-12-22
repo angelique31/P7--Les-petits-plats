@@ -37,6 +37,11 @@ function search (recipes) {
             displayRecipes(result); //fonction appelée qui permet le tri des cartes des recettes    
             filtersList(result);
         } 
+        
+        if(inputLetters.length === 0 ) {
+            displayRecipes(recipes); //fonction appelée qui permet le tri des cartes des recettes    
+            filtersList(recipes);
+        }
        
     };
     searchInput.addEventListener('input', filterData);
@@ -60,7 +65,7 @@ export default search;
 //                 for (let j = 0; j < recipes[i].ingredients.length; j++) {
 //                     // console.log(recipes[i].ingredients);
 //                     ingredientArray.push(recipes[i].ingredients[j]);
-//                     console.log(ingredientArray);
+//                     // console.log(ingredientArray);
 //                 }
 //                 if(recipes[i].name.toLowerCase().includes(inputLetters) ||
 //                 recipes[i].description.toLowerCase().includes(inputLetters) ||

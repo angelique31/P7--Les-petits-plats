@@ -10,19 +10,21 @@ const inputSearchIngredient = document.querySelector('.ingredient-list');
 const searchButtonsInput = (recipes) => {
     const filterDataInput = (e) => {
         const lettersInput = formatText(e.target.value);
-
-        if (lettersInput.length >= 1) {
-
+            if (lettersInput.length >= 1) {
             /**
              * Construit la liste brute des ingrédients
              * @param {array} array 
              */
             const getIngredientsList = (array) => {
+                // console.log(array);
                 const result = [];
                 for (let i = 0; i < array.length; i++) {
+                    //on boucle sur les ingrédients des recettes
                     const ingredients = array[i].ingredients;
+                    // console.log(ingredients)
                     for (let j = 0; j < ingredients.length; j++) {
                         result.push(ingredients[j].ingredient);
+                        // console.log(result);
                     }
                 }
                 return result;
@@ -38,28 +40,35 @@ const searchButtonsInput = (recipes) => {
             };
 
             const getIngredientFilter = (array, input) => {
+                // console.log(array, input)
                 const result = [];
-
+                //on boucle sur les ingrédients triés (sans doublons)
                 for (let i = 0; i < array.length; i++) {
-
+                    // console.log(array[i])
+                    //Si la valeur du filtre (ici un ingrédient) correspondent à ce que l'on tape dans l'input,
+                    //on affiche le résultat  
                     if (formatText(array[i]).includes(input)) {
                         result.push(array[i]);
+                        // console.log(result);
                     }
                 }
                 return result;
             };
 
+            // La liste de tous les ingrédients
             const ingredientsList = getIngredientsList(recipes);
+            // La liste des ingrédients triés (sans doublons)
             const ingredientReduce = getIngredientsSort(ingredientsList);
+            // correspondance entre les ingrédients triés et ce que l'on tape dans l'input
             const match = getIngredientFilter(ingredientReduce, lettersInput);
-
+            // console.log(match);
             const filter = {
                 type: 'ingredient',
                 container: '#ingredient-list-menu',
                 values: match,
                 config: configFilter.ingredient,
             };
-
+            // console.log(filter);
             filtersColumn(recipes, filter);            
         }
     };

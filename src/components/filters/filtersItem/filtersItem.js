@@ -1,6 +1,6 @@
 import { tagsItem} from "../../tags/tagsItem/tagsItem";
 /**
- * Fonction qui permet l'affichage de la liste des ingrédients dans le filtre des ingrédients
+ * Fonction qui permet l'affichage d'une liste dans un filtre (par ex la liste des ingrédients dans l'input des ingrédients)
  */
 const filtersItem = (name, container, index, type, recipes, config) =>{
     const id = `${type}-${index}`;

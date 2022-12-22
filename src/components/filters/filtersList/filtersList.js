@@ -1,13 +1,10 @@
-/* eslint-disable quotes */
-/* eslint-disable indent */
 import filtersColumn from "../filtersColumn/filtersColumn";
 import { sortByIngredient, sortByAppliance, sortByUstensile } from "../../../utils/sort";
 import configFilter from "../../../configs/filters";
 
 /**
- *  On boucle sur les 3 filtres (ingredient, appareil et ustensil).
- *  Puis on itère sur un seul filtre
- *  Filtrer les listes des recettes
+ *  Construit les filtres.
+ *  On boucle sur les 3 filtres (les 3 inputs)
  */
 const filtersList = (recipes) => {
     const filters = [
@@ -33,6 +30,7 @@ const filtersList = (recipes) => {
 
     for (let i = 0; i < filters.length; i++) {
         const filter = filters[i];
+        // console.log(filter)
         filtersColumn(recipes, filter);
     }
 

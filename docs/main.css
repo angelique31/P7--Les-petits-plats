@@ -6,7 +6,12 @@
 }
 
 body {
-  margin: 50px;
+  margin: 40px;
+}
+@media screen and (max-width: 700px) {
+  body {
+    margin: 10px;
+  }
 }
 
 /***********************VARIABLES******************/
@@ -43,7 +48,7 @@ nav input {
 }
 nav input::placeholder {
   font-size: 1.2rem;
-  color: #000000;
+  color: #a4a2a2;
   font-weight: 400;
   padding-left: 15px;
 }
@@ -60,8 +65,8 @@ nav input:focus {
 nav img {
   position: absolute;
   right: 70px;
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
 }
 
 .selection {
@@ -128,7 +133,7 @@ nav img {
   width: 667px;
   border-radius: 5px 5px 0 0;
   height: 70px;
-  opacity: 50%;
+  opacity: 70%;
 }
 @media screen and (max-width: 700px) {
   .ingredient-list,
@@ -232,6 +237,7 @@ nav img {
 .ustensil_button {
     margin: auto;
     width: 100%;
+    justify-content: space-between;
   }
 }
 .ingredient_button::placeholder,
@@ -274,7 +280,6 @@ nav img {
 
 .recipe {
   min-width: 300px;
-  max-width: 450px;
   min-height: 364px;
   max-height: 400px;
   height: 500px;
@@ -297,6 +302,7 @@ nav img {
   height: 178px;
   width: 100%;
   object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
 }
 .recipe__info {
   padding: 20px;
@@ -342,6 +348,7 @@ nav img {
   -webkit-line-clamp: 7;
   font-family: "Roboto", sans-serif;
   font-size: 0.75rem;
+  line-height: 0.75rem;
 }
 
 /************Responsive**********/
@@ -358,9 +365,6 @@ nav img {
     grid-template-columns: 1fr;
     width: 100%;
   }
-  .section_recipe {
-    margin-top: 324px;
-  }
   .input-appliances {
     top: 422px;
     left: 48px;
@@ -368,6 +372,11 @@ nav img {
   .input-ustensils {
     top: 533px;
     left: 48px;
+  }
+}
+@media screen and (max-width: 710px) {
+  .recipe {
+    width: 100%;
   }
 }
 .container_selected {
@@ -441,7 +450,7 @@ nav img {
   display: none;
   cursor: pointer;
   position: relative;
-  left: 613px;
+  left: 623px;
   bottom: 39px;
 }
 @media screen and (max-width: 710px) {
