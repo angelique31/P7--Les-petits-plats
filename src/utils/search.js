@@ -13,13 +13,14 @@ const searchButtonsInput = (recipes) => {
             if (lettersInput.length >= 1) {
             /**
              * Construit la liste brute des ingrédients
-             * @param {array} array 
+             * @param {array} array (les 50 recettes)
              */
             const getIngredientsList = (array) => {
                 // console.log(array);
                 const result = [];
                 for (let i = 0; i < array.length; i++) {
-                    //on boucle sur les ingrédients des recettes
+                    //on boucle sur les 50 recettes
+                    // console.log(array[i])
                     const ingredients = array[i].ingredients;
                     // console.log(ingredients)
                     for (let j = 0; j < ingredients.length; j++) {
@@ -45,7 +46,7 @@ const searchButtonsInput = (recipes) => {
                 //on boucle sur les ingrédients triés (sans doublons)
                 for (let i = 0; i < array.length; i++) {
                     // console.log(array[i])
-                    //Si la valeur du filtre (ici un ingrédient) correspondent à ce que l'on tape dans l'input,
+                    //Si la valeur du filtre (ici un ingrédient) correspond à ce que l'on tape dans l'input,
                     //on affiche le résultat  
                     if (formatText(array[i]).includes(input)) {
                         result.push(array[i]);
