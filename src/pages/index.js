@@ -3,16 +3,16 @@ import filtersList from "../components/filters/filtersList/filtersList";
 import {} from "../components/tags/tagsInput/tagsInput";
 import { searchButtonsInput, searchButtonsInputAppliance, searchButtonsInputUstensil} from "../utils/search";
 import displayRecipes from "../components/recipes";
-import filterData from "../components/search/search";
+import search from "../components/search/search";
 
 
 async function init() {
   const { recipes } = await getRecipes();
 
   displayRecipes(recipes);
-  // search(recipes);
+  search(recipes);
   filtersList(recipes);
-  filterData(recipes);
+  // filterData(recipes);
   searchButtonsInput(recipes);
   searchButtonsInputAppliance(recipes);
   searchButtonsInputUstensil(recipes);
