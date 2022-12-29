@@ -14,10 +14,7 @@ export const sortByIngredient = (recipes) => {
       }
     });
   });
-  // console.log(data);
-  //New set pour enlever les doublons
   let ingredientSort = [...new Set(data)].sort();
-  // console.log(ingredientSort);
   return ingredientSort;
 };
 

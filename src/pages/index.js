@@ -1,7 +1,7 @@
 import { getRecipes } from "../utils/api";
 import filtersList from "../components/filters/filtersList/filtersList";
 import {} from "../components/tags/tagsInput/tagsInput";
-import searchButtonsInput from "../utils/search";
+import { searchButtonsInput, searchButtonsInputAppliance, searchButtonsInputUstensil} from "../utils/search";
 import displayRecipes from "../components/recipes";
 import search from "../components/search/search";
 
@@ -14,5 +14,7 @@ async function init() {
   filtersList(recipes);
 
   searchButtonsInput(recipes);
-}
+  searchButtonsInputAppliance(recipes);
+  searchButtonsInputUstensil(recipes);
+ }
 init();

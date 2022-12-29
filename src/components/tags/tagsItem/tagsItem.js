@@ -1,7 +1,7 @@
 import searchByfilters from '../../../utils/filter';
 
 /**
- * Fonction qui permet l'affichage d'un ingrédient dans un tag
+ * Fonction qui permet l'affichage d'un tag actif
  */
 export const tagsItem = (ingredient, recipes, type, config) => {
   // console.log(config);

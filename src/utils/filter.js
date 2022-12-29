@@ -5,8 +5,8 @@ import filtersList from '../components/filters/filtersList/filtersList';
 
 
 /**
- * Fonction qui récupère la valeur du tag.
- * On créé les types et valeurs des tags
+ * Fonction qui récupère la valeur du tag actif.
+ * On créé les types et valeurs des tags actifs
  */
 export const getFilters = () => {
     const container = document.getElementById('selected__tag');
@@ -58,7 +58,7 @@ export const getFilters = () => {
 
 
 /**
- * Tri les recettes en fonction des filtres (des tags)
+ * Tri les recettes en fonction de la correspondance entre le filtre et le tag actif
  * @param {array} recipes
  * @param {array} filters
  * @return recettes filtrées
