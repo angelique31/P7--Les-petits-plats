@@ -27,10 +27,12 @@ function search(recipes) {
     return false;
   };
 
-  let recipesArray = [];
+  
   const filterData = (e) => {
+    let recipesArray = [];
     const inputLetters = formatText(e.target.value);
     if (inputLetters.length > 2) {
+      console.log("entrée dans le if", recipes, inputLetters);
       // on boucle sur chaque recette
       for (let i = 0; i < recipes.length; i++) {
         // console.log(recipes[i]);
@@ -50,12 +52,16 @@ function search(recipes) {
         ) {
           recipesArray.push(recipes[i]);
         }
-        // console.log(recipesArray);
+        
       }
+      console.log("resultat de la boucle", recipesArray);
       displayRecipes(recipesArray);
       filtersList(recipesArray);
     }
-
+    if(inputLetters.length === 0 ) {
+      displayRecipes(recipes); 
+      filtersList(recipes);
+    }
   };
   searchInput.addEventListener("input", filterData);
 }
