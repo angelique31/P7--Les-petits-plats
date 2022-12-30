@@ -5,19 +5,24 @@ import filtersList from "../filters/filtersList/filtersList";
 let searchInput = document.querySelector("#search_input");
 
 /**
- * Fonction de recherche avec la boucle for
+ * Fonction de recherche de la barreprincipale avec la boucle for
  */
 function search(recipes) {
-
+  /**
+   * 
+   * @param {*} item 
+   * @param {*} inputs 
+   * @returns Fonction qui récupère tous les ingrédients
+   */
   const checkIngredients = (item, inputs) => {
     // console.log(item, inputs);
     let response = false;
-
     for (let j = 0; j < item.ingredients.length; j++) {
         // console.log(item.ingredients[j])
       if (item.ingredients[j].ingredient.includes(inputs)) {
         response = true;
       }
+      // console.log(item.ingredients[j].ingredient);
     }
     return false;
   };
@@ -26,8 +31,9 @@ function search(recipes) {
   const filterData = (e) => {
     const inputLetters = formatText(e.target.value);
     if (inputLetters.length > 2) {
+      // on boucle sur chaque recette
       for (let i = 0; i < recipes.length; i++) {
-        //   console.log(recipes[i]);
+        // console.log(recipes[i]);
         const formatedInput = formatText(inputLetters);
         // console.log(formatedInput);
         const recipe = recipes[i];
@@ -44,7 +50,7 @@ function search(recipes) {
         ) {
           recipesArray.push(recipes[i]);
         }
-        console.log(recipesArray);
+        // console.log(recipesArray);
       }
       displayRecipes(recipesArray);
       filtersList(recipesArray);

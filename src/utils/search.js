@@ -24,6 +24,7 @@ export const searchButtonsInput = (recipes) => {
           for (let j = 0; j < ingredients.length; j++) {
             result.push(ingredients[j].ingredient);
           }
+          console.log(result)
         }
         return result;
       };
