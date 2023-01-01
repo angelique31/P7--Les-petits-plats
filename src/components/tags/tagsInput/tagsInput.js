@@ -33,6 +33,14 @@ const openInputIngredient =  () => {
     ingredientListMenu.style.display = 'block';
     chevronUpIngredient.style.display = 'block';
     chevronDownIngredient.style.display = 'none';
+
+    appliance.style.display = 'flex';
+    appliancetList.style.display = 'none';
+    chevronDownAppliance.style.display = 'block';
+
+    ustensils.style.display = 'flex';
+    ustensilList.style.display = 'none';
+    chevronDownUstensils.style.display = 'block';
 };
 ingredient.addEventListener ('click', openInputIngredient);
 
@@ -45,6 +53,14 @@ const openInputAppliance = () => {
     applianceListMenu.style.display = 'block';
     chevronUpAppliance.style.display = 'block';
     chevronDownAppliance.style.display = 'none';
+
+    ingredient.style.display = 'flex';
+    ingredientList.style.display = 'none';
+    chevronDownIngredient.style.display = 'block';
+    
+    ustensils.style.display = 'flex';
+    ustensilList.style.display = 'none';
+    chevronDownUstensils.style.display = 'block';
 };
 appliance.addEventListener ('click', openInputAppliance);
 
@@ -57,6 +73,14 @@ const openInputUstensil = () => {
     ustensilListMenu.style.display = 'block';
     chevronUpUstensils.style.display = 'block';
     chevronDownUstensils.style.display = 'none';
+
+    ingredient.style.display = 'flex';
+    ingredientList.style.display = 'none';
+    chevronDownIngredient.style.display = 'block';
+
+    appliance.style.display = 'flex';
+    appliancetList.style.display = 'none';
+    chevronDownAppliance.style.display = 'block';
 };
 ustensils.addEventListener ('click', openInputUstensil);
 
@@ -68,8 +92,6 @@ ustensils.addEventListener ('click', openInputUstensil);
 const closeInputIngredient = () => {
     ingredient.style.display = 'flex';
     ingredientList.style.display = 'none';
-    ingredientListMenu.style.display = 'none';
-    chevronUpIngredient.style.display = 'none';
     chevronDownIngredient.style.display = 'block';
 };
 
@@ -81,8 +103,6 @@ chevronUpIngredient.addEventListener ('click', closeInputIngredient);
 const closeInputAppliance = () => {
     appliance.style.display = 'flex';
     appliancetList.style.display = 'none';
-    applianceListMenu.style.display = 'none';
-    chevronUpAppliance.style.display = 'none';
     chevronDownAppliance.style.display = 'block';
 };
 chevronUpAppliance.addEventListener ('click', closeInputAppliance);
@@ -93,8 +113,6 @@ chevronUpAppliance.addEventListener ('click', closeInputAppliance);
 const closeInputUstensils = () => {
     ustensils.style.display = 'flex';
     ustensilList.style.display = 'none';
-    ustensilListMenu.style.display = 'none';
-    chevronUpUstensils.style.display = 'none';
     chevronDownUstensils.style.display = 'block';
 };
 

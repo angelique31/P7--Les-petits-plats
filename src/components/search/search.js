@@ -5,7 +5,7 @@ import filtersList from "../filters/filtersList/filtersList";
 let searchInput = document.querySelector("#search_input");
 
 /**
- * Fonction de recherche de la barreprincipale avec la boucle for
+ * Fonction de recherche de la barre principale avec la boucle for
  */
 function search(recipes) {
   /**
@@ -19,7 +19,7 @@ function search(recipes) {
     let response = false;
     for (let j = 0; j < item.ingredients.length; j++) {
         // console.log(item.ingredients[j])
-      if (item.ingredients[j].ingredient.includes(inputs)) {
+      if (formatText(item.ingredients[j].ingredient).includes(inputs)) {
         response = true;
       }
       // console.log(item.ingredients[j].ingredient);
@@ -32,16 +32,13 @@ function search(recipes) {
     let recipesArray = [];
     const inputLetters = formatText(e.target.value);
     if (inputLetters.length > 2) {
-      console.log("entrée dans le if", recipes, inputLetters);
       // on boucle sur chaque recette
       for (let i = 0; i < recipes.length; i++) {
         // console.log(recipes[i]);
-        const formatedInput = formatText(inputLetters);
-        // console.log(formatedInput);
         const recipe = recipes[i];
         const formatedRecipe = {
-          name: recipe.name,
-          description: recipe.description,
+          name: formatText(recipe.name),
+          description: formatText(recipe.description),
           ingredients: recipe.ingredients,
         };
         // console.log(formatedRecipe);
@@ -52,9 +49,9 @@ function search(recipes) {
         ) {
           recipesArray.push(recipes[i]);
         }
-        
+        console.log(recipesArray)
       }
-      console.log("resultat de la boucle", recipesArray);
+  
       displayRecipes(recipesArray);
       filtersList(recipesArray);
     }
