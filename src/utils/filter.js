@@ -68,6 +68,7 @@ export const getRecipes = (recipes, filters) => {
     let result = [];
 
     const filterIngredients = (ingredients, value) => {
+        // console.log(ingredients, value)
         return ingredients.find((item) =>
             formatText(item.ingredient).includes(value)
         );
