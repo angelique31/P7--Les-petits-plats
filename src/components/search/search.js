@@ -49,7 +49,7 @@ function search(recipes) {
         ) {
           recipesArray.push(recipes[i]);
         }
-        // console.log(recipesArray)
+        console.log(recipesArray)
       }
   
       displayRecipes(recipesArray);
