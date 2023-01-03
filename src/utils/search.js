@@ -19,7 +19,7 @@ export const searchButtonsInput = (recipes) => {
         const result = [];
         //on boucle sur les 50 recettes
         for (let i = 0; i < array.length; i++) {
-        //on boucle sur les ingrédients qui contiennent eux même un tableau d'objet
+          //on boucle sur les ingrédients qui contiennent eux même un tableau d'objet
           const ingredients = array[i].ingredients;
           for (let j = 0; j < ingredients.length; j++) {
             result.push(ingredients[j].ingredient);
@@ -29,7 +29,7 @@ export const searchButtonsInput = (recipes) => {
       };
 
       /**
-       * Supprime les ingrédients duppliqués
+       * Supprime les ingrédients dupliqués
        * @param {array} array
        * @returns
        */
@@ -68,9 +68,10 @@ export const searchButtonsInput = (recipes) => {
   inputSearchIngredient.addEventListener("input", filterDataInput);
 };
 
+
 const inputSearchAppliance = document.querySelector(".appliance-list");
 /**
- * Fonction qui filtre les appareils en fonction de ce qui est tapé dans l'input appareil
+ * Fonction qui filtre les appareils en fonction de ce qui est tapé dans l'input ingredient
  * @param {*} recipes
  */
 export const searchButtonsInputAppliance = (recipes) => {
@@ -86,14 +87,14 @@ export const searchButtonsInputAppliance = (recipes) => {
         //on boucle sur les 50 recettes
         for (let i = 0; i < array.length; i++) {
           const appliance = array[i].appliance;
-          //on créé un nouveau tableau avec la liste de tous les appareils
-          result.push(appliance);
+            //on créé un nouveau tableau avec la liste de tous les appareils
+            result.push(appliance);
         }
         return result;
       };
 
       /**
-       * Supprime les appareils duppliqués
+       * Supprime les appareils dupliqués
        * @param {array} array
        * @returns
        */
@@ -103,9 +104,9 @@ export const searchButtonsInputAppliance = (recipes) => {
 
       const getApplianceFilter = (array, input) => {
         const result = [];
-        //on boucle sur les ingrédients triés (sans doublons)
+        //on boucle sur les appareils triés (sans doublons)
         for (let i = 0; i < array.length; i++) {
-          //Si la valeur du filtre (ici un ingrédient) correspond à ce que l'on tape dans l'input,
+          //Si la valeur du filtre  correspond à ce que l'on tape dans l'input,
           //on affiche le résultat
           if (formatText(array[i]).includes(input)) {
             result.push(array[i]);
@@ -113,24 +114,23 @@ export const searchButtonsInputAppliance = (recipes) => {
         }
         return result;
       };
-
-      // La liste de tous les appareils
+      
       const appliancesList = getAppliancesList(recipes);
-      // La liste des appareils triés (sans doublons)
-      const appliancesReduce = getAppliancesSort(appliancesList);
-      // correspondance entre les ingrédients triés et ce que l'on tape dans l'input
-      const match = getApplianceFilter(appliancesReduce, lettersInput);
+      const applianceReduce = getAppliancesSort(appliancesList);
+      const match = getApplianceFilter(applianceReduce, lettersInput);
       const filter = {
         type: "appliance",
         container: "#appliance-list-menu",
         values: match,
-        config: configFilter.appliance,
+        config: configFilter.ingredient,
       };
+      // console.log(filter);
       filtersColumn(recipes, filter);
     }
   };
   inputSearchAppliance.addEventListener("input", filterDataInput);
 };
+
 
 const inputSearchUstensil = document.querySelector(".ustensil-list");
 /**

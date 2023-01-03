@@ -68,6 +68,7 @@ export const getRecipes = (recipes, filters) => {
     let result = [];
 
     const filterIngredients = (ingredients, value) => {
+        // console.log(ingredients, value)
         return ingredients.find((item) =>
             formatText(item.ingredient).includes(value)
         );
@@ -115,6 +116,7 @@ export const getRecipes = (recipes, filters) => {
 const searchByfilters = (recipes) => {
     //récupère les tags :
     const filters = getFilters();
+    // console.log(filters);
     if (filters.length === 0) {
         displayRecipes(recipes);
         filtersList(recipes);
