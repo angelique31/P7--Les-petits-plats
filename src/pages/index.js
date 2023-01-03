@@ -1,20 +1,20 @@
-import { getRecipes } from "../utils/api";
-import filtersList from "../components/filters/filtersList/filtersList";
-import {} from "../components/tags/tagsInput/tagsInput";
-import { searchButtonsInput, searchButtonsInputAppliance, searchButtonsInputUstensil} from "../utils/search";
-import displayRecipes from "../components/recipes";
-import search from "../components/search/search";
+import { getRecipes } from '../utils/api';
+import filtersList from '../components/filters/filtersList/filtersList';
+import {} from '../components/tags/tagsInput/tagsInput';
+import { searchButtonsInput, searchButtonsInputAppliance, searchButtonsInputUstensil} from '../utils/search';
+import displayRecipes from '../components/recipes';
+import search from '../components/search/search';
 
 
 async function init() {
-  const { recipes } = await getRecipes();
+    const { recipes } = await getRecipes();
 
-  displayRecipes(recipes);
-  search(recipes);
-  filtersList(recipes);
+    displayRecipes(recipes);
+    search(recipes);
+    filtersList(recipes);
 
-  searchButtonsInput(recipes);
-  searchButtonsInputAppliance(recipes);
-  searchButtonsInputUstensil(recipes);
- }
+    searchButtonsInput(recipes);
+    searchButtonsInputAppliance(recipes);
+    searchButtonsInputUstensil(recipes);
+}
 init();

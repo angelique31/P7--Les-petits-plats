@@ -10,7 +10,7 @@ const filtersColumn = (recipes, filter) => {
     const tags = getFilters();
     const tagsValues = [];
 
-    //on récupère la valeur du tag
+    // on récupère la valeur du tag
     for (let i = 0; i < tags.length; i++) {
         tagsValues.push(tags[i].value);
     }
@@ -21,8 +21,8 @@ const filtersColumn = (recipes, filter) => {
     //on itère sur les valeurs d'un des filtres, puis
     //on insère les valeurs filtrées dans la liste du filtre
     for (let j = 0; j < filter.values.length; j++) {
-        //si la valeur du tag est différente de la valeur du filtre, 
-        //on affiche la liste filtrée dans le filtre
+    //si la valeur du tag est différente de la valeur du filtre, 
+    //on affiche la liste filtrée dans le filtre
         if (!tagsValues.includes(formatText(filter.values[j]))) {
             filtersItem(filter.values[j], container, j, filter.type, recipes, filter.config);
         }
