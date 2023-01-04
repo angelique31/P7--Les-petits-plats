@@ -1,6 +1,7 @@
 import configFilter from '../configs/filters';
 import { formatText } from '../utils/format';
 import filtersColumn from '../components/filters/filtersColumn/filtersColumn';
+import { sortByAppliance, sortByUstensile } from './sort';
 
 const inputSearchIngredient = document.querySelector('.ingredient-list');
 /**
@@ -122,7 +123,15 @@ export const searchButtonsInputAppliance = (recipes) => {
                 type: 'appliance',
                 container: '#appliance-list-menu',
                 values: match,
-                config: configFilter.ingredient,
+                config: configFilter.appliance,
+            };
+            filtersColumn(recipes, filter);
+        } else {
+            const filter = {
+                type: 'appliance',
+                container: '#appliance-list-menu',
+                values: sortByAppliance(recipes),
+                config: configFilter.appliance,
             };
             // console.log(filter);
             filtersColumn(recipes, filter);
@@ -191,8 +200,17 @@ export const searchButtonsInputUstensil = (recipes) => {
                 type: 'ustensil',
                 container: '#ustensil-list-menu',
                 values: match,
-                config: configFilter.appliance,
+                config: configFilter.ustensil,
             };
+            filtersColumn(recipes, filter);
+        } else {
+            const filter = {
+                type: 'ustensil',
+                container: '#ustensil-list-menu',
+                values: sortByUstensile(recipes),
+                config: configFilter.ustensil,
+            };
+            // console.log(filter);
             filtersColumn(recipes, filter);
         }
     };

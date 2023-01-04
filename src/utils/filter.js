@@ -95,11 +95,11 @@ export const getRecipes = (recipes, filters) => {
         const value = filters[i].value;
         // console.log(value);
         const match = search (value);
-        // console.log(match);
+        console.log(match);
         if (match && match[0]) {
             result = result.concat(match);
         } 
-        // console.log(result);
+        console.log(result);
     }
     
     const resultSort = [...new Set(result)].sort();
