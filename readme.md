@@ -16,6 +16,7 @@ Après avoir cloné le projet, il suffit d'ouvrir le fichier ./doc/index.html, p
 - Faire un schéma, ou "algorigramme", pour chacune des versions.
 - Utiliser 2 branches différentes sur Git, une branche par implémentation.
 - Utiliser l’outil de comparaison de performance Jsben.ch 
+
 ## Validation avec W3C du projet
 ![image](https://user-images.githubusercontent.com/93211301/210443003-9fc16f37-2ea4-4e71-b8d8-34ed4a0d92a9.png)
 
