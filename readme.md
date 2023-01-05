@@ -10,7 +10,7 @@ L’entreprise a décidé de réaliser son propre site de recettes de cuisine.
 Après avoir cloné le projet, il suffit d'ouvrir le fichier ./doc/index.html, puis clic droit "open with live server"
 
 ## Respect des normes suivantes 
-- Faire deux implémentations différentes de l'algoruthme  pour pouvoir comparer leurs performances et choisir la meilleure.
+- Faire deux implémentations différentes de l'algorithme  pour pouvoir comparer leurs performances et choisir la meilleure.
 - Créer un document de comparaison qu’on appelle “fiche d’investigation de fonctionnalité”.
 - Créer une version utilisant les boucles natives  et une version en programmation fonctionnelle.
 - Faire un schéma, ou "algorigramme", pour chacune des versions.
