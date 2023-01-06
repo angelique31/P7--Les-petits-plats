@@ -2,7 +2,7 @@
  * Message d'erreur  
  * @param {*} recipes 
  */
- function recipesNotFound(show){
+function recipesNotFound(show){
     const component = document.getElementById('no-result');
 
     if (show){

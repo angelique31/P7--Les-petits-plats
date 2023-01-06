@@ -12,7 +12,7 @@ function search(recipes) {
    * Fonction qui récupère tous les ingrédients
    * @param {*} item 
    * @param {*} inputs 
-   * @returns responseit 
+   * @returns response 
    */
     const checkIngredients = (item, inputs) => {
         let response = false;

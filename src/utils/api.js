@@ -7,7 +7,6 @@ export async function getRecipes() {
             return res.json();
         })
         .then((datas) => {
-            // console.log(datas);
             return datas;
         });
 }
