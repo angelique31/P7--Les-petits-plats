@@ -101,8 +101,8 @@ chevronUpIngredient.addEventListener ('click', closeInputIngredient);
  * Fermeture de l'input appliance au clic sur le chevron up
  */
 const closeInputAppliance = () => {
-    ingredient.style.display = 'flex';
-    ingredientList.style.display = 'none';
+    appliance.style.display = 'flex';
+    appliancetList.style.display = 'none';
     chevronDownIngredient.style.display = 'block';
 };
 chevronUpAppliance.addEventListener ('click', closeInputAppliance);
