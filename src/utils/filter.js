@@ -52,7 +52,6 @@ export const getFilters = () => {
         let filter = { type: getType(tag.className), value: getValue(tag) };
         filters.push(filter);
     }
-    // console.log(filters);
     return filters;
 };
 
@@ -119,13 +118,11 @@ export const getRecipes = (recipes, filters) => {
 const searchByfilters = (recipes) => {
     //récupère les tags :
     const filters = getFilters();
-    // console.log(filters);
     if (filters.length === 0) {
         displayRecipes(recipes);
         filtersList(recipes);
     } else {
         const recipesFilters = getRecipes(recipes, filters);
-        // console.log(recipesFilters)
         displayRecipes(recipesFilters);
         filtersList(recipesFilters);
     } 

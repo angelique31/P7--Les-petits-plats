@@ -30,9 +30,7 @@ const filtersList = (recipes) => {
 
     for (let i = 0; i < filters.length; i++) {
         const filter = filters[i];
-        // console.log(filter)
         filtersColumn(recipes, filter);
     }
-
 };
 export default filtersList;

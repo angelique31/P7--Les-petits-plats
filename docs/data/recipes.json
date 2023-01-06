@@ -925,7 +925,7 @@
       ],
       "time": 25,
       "description": "Verser de l'huile dans une cocotte minute. Couper les légumes et les verser dans l'huile chaude. Laisser cuire et remuer pendant 10 minutes. Passer aux mixer. Servir.",
-      "appliance": "Mixer",
+      "appliance": "Mixeur",
       "ustensils": ["Cocotte minute", "Couteau"]
     },
     {
@@ -1026,7 +1026,7 @@
       ],
       "time": 30,
       "description": "Prendre les pois chiches, les mettre dans le mixer avec de l'huile d'olive, ajouter le jus des 2 citrons et du paprika selon le goût.",
-      "appliance": "Mixer",
+      "appliance": "Mixeur",
       "ustensils": ["Cuillère en bois", "Presse citron"]
     },
     {
@@ -1051,7 +1051,7 @@
       ],
       "time": 60,
       "description": "Mettre tous les ingrédients dans une cocotte. ajouter de l'eau pour recouvrir l'ensemble et laisser cuirre à petit feur pour 1 heure. Passer au mixer. Salez, poivrez. C'est prêt",
-      "appliance": "Mixer",
+      "appliance": "Mixeur",
       "ustensils": ["Casserole", "Cuillère en bois"]
     },
     {
@@ -1189,7 +1189,7 @@
       ],
       "time": 25,
       "description": "Epluchez les patates douces et coupez les en morceaux. Les faire cuire durant 20 minutes dans une casserole d'eau bouillante. Passez au mixer en ajoutant la crème et l'huile d'olive à vôtre gout. Salez, poivrez. Pressez l'orange et ajouter le jus à l'ensemble. Servir.",
-      "appliance": "Mixer",
+      "appliance": "Mixeur",
       "ustensils": ["Couteau", "Econome", "Cuillère en bois"]
     },
     {
@@ -1228,7 +1228,7 @@
       ],
       "time": 25,
       "description": "Éplucher les légumes, les couper en morceaux et les mettre à cuire dans une cocotte minute environ 15 minutes. Mixer en ajoutant le beurre, la crème. Ajouter le cumin et la noix de muscade.",
-      "appliance": "Mixer",
+      "appliance": "Mixeur",
       "ustensils": ["Cocotte minute", "Couteau", "Cuillère en bois"]
     },
     {

@@ -4,7 +4,6 @@ import searchByfilters from '../../../utils/filter';
  * Fonction qui permet l'affichage d'un tag actif
  */
 export const tagsItem = (ingredient, recipes, type, config) => {
-    // console.log(config);
     const container = document.getElementById('selected__tag');
     const idTag = `tag-${type}-${ingredient.id}`;
     const idButton = `tag-ingredient-close-${ingredient.id}`;

@@ -6,7 +6,6 @@ import { formatText } from '../../../utils/format';
  *  Gère l'affichage des filtres
  */
 const filtersColumn = (recipes, filter) => {
-    // console.log(filter)
     const tags = getFilters();
     const tagsValues = [];
 

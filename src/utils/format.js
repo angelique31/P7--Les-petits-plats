@@ -1,5 +1,4 @@
 export function formatText (text) {
-    // console.log(text);
     return text.toLowerCase()
         .trim()
         .normalize('NFD')

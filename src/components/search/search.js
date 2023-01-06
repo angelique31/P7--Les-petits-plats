@@ -14,7 +14,6 @@ function search (recipes) {
         const inputLetters = formatText(e.target.value);
         if (inputLetters.length > 2 ) {
             const filterIngredients = (ingredients) => {
-                // console.log(ingredients)
                 return ingredients.find(item => formatText(item.ingredient).includes(inputLetters));
             };
             result = recipes.filter(recipe => {
@@ -29,23 +28,18 @@ function search (recipes) {
     || formatedRecipe.description.includes(inputLetters);
 
                 return match;
-
             });
-            // console.log(result);
 
             displayRecipes(result); //fonction appelée qui permet le tri des cartes des recettes
             filtersList(result);
         }
-
         if(inputLetters.length === 0 ) {
-            displayRecipes(recipes); //fonction appelée qui permet le tri des cartes des recettes
+            displayRecipes(recipes); 
             filtersList(recipes);
         }
-
     };
     searchInput.addEventListener('input', filterData);
 }
-
 export default search;
 
 

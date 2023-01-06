@@ -85,10 +85,8 @@ export const searchButtonsInputAppliance = (recipes) => {
        */
             const getAppliancesList = (array) => {
                 const result = [];
-                //on boucle sur les 50 recettes
                 for (let i = 0; i < array.length; i++) {
                     const appliance = array[i].appliance;
-                    //on créé un nouveau tableau avec la liste de tous les appareils
                     result.push(appliance);
                 }
                 return result;
@@ -105,10 +103,7 @@ export const searchButtonsInputAppliance = (recipes) => {
 
             const getApplianceFilter = (array, input) => {
                 const result = [];
-                //on boucle sur les appareils triés (sans doublons)
                 for (let i = 0; i < array.length; i++) {
-                    //Si la valeur du filtre  correspond à ce que l'on tape dans l'input,
-                    //on affiche le résultat
                     if (formatText(array[i]).includes(input)) {
                         result.push(array[i]);
                     }
@@ -133,7 +128,6 @@ export const searchButtonsInputAppliance = (recipes) => {
                 values: sortByAppliance(recipes),
                 config: configFilter.appliance,
             };
-            // console.log(filter);
             filtersColumn(recipes, filter);
         }
     };
@@ -156,7 +150,6 @@ export const searchButtonsInputUstensil = (recipes) => {
        */
             const getUstensilsList = (array) => {
                 const result = [];
-                //on boucle sur les 50 recettes
                 for (let i = 0; i < array.length; i++) {
                     //on récupère les ustensils (qui sont dans un tableau multi-dimensionnel)
                     const ustensil = array[i].ustensils;
@@ -181,8 +174,6 @@ export const searchButtonsInputUstensil = (recipes) => {
             const getUstensilFilter = (array, input) => {
                 const result = [];
                 for (let i = 0; i < array.length; i++) {
-                    //Si la valeur du filtre (ici un ustensil) correspond à ce que l'on tape dans l'input,
-                    //on affiche le résultat
                     if (formatText(array[i]).includes(input)) {
                         result.push(array[i]);
                     }
@@ -190,11 +181,8 @@ export const searchButtonsInputUstensil = (recipes) => {
                 return result;
             };
 
-            // La liste de tous les ustensils
             const ustensilsList = getUstensilsList(recipes);
-            // La liste des ustensils triés (sans doublons)
             const ustensilsReduce = getUstensilSort(ustensilsList);
-            // correspondance entre les ustensils triés et ce que l'on tape dans l'input
             const match = getUstensilFilter(ustensilsReduce, lettersInput);
             const filter = {
                 type: 'ustensil',
@@ -210,7 +198,6 @@ export const searchButtonsInputUstensil = (recipes) => {
                 values: sortByUstensile(recipes),
                 config: configFilter.ustensil,
             };
-            // console.log(filter);
             filtersColumn(recipes, filter);
         }
     };
