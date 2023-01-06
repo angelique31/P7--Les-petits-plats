@@ -63,46 +63,53 @@ export const getFilters = () => {
  * @param {array} filters
  * @return recettes filtrées
  */
-export const getRecipes = (recipes, filters) => {
-    // console.log(filters);
-    let result = [];
-
-    const filterIngredients = (ingredients, value) => {
-        // console.log(ingredients, value)
-        return ingredients.find((item) =>
-            formatText(item.ingredient).includes(value)
-        );
-    };
-
-    const search = (value) => recipes.filter((recipe) => {
-        const formatedRecipe = {
-            name: formatText(recipe.name),
-            ingredients: recipe.ingredients,
-            description: formatText(recipe.description),
-        };
-       
-        const match =
-      formatedRecipe.name.includes(value) ||
-      filterIngredients(formatedRecipe.ingredients, value) ||
-      formatedRecipe.description.includes(value);
-
-        return match;
-    });
-    
-  
-    for (let i = 0; i < filters.length; i++) {
-        // console.log(filters);
-        const value = filters[i].value;
-        // console.log(value);
-        result = search(value);
-        console.log(result);
-    }
-    
-    const resultSort = [...new Set(result)].sort();
-    // console.log(resultSort);
-    return resultSort;
+const filterIngredients = (ingredients, value) => {
+    return ingredients.find((item) => formatText(item.ingredient).includes(value));
 };
 
+const filterAppliances = (appliance, value) => {
+    return formatText(appliance).includes(value);
+};
+
+const filterUstensils = (ustensils, value) => {
+    return ustensils.find((item) => formatText(item).includes(value));
+};
+
+const search = (value, type, recipe) => {
+    let match = '';
+    const formatedRecipe = {
+        name: formatText(recipe.name),
+        ingredients: recipe.ingredients,
+        appliance: recipe.appliance,
+        ustensils: recipe.ustensils,
+        description: formatText(recipe.description),
+    };
+
+    switch (type) {
+    case configFilters.ingredient.type:
+        match = formatedRecipe.name.includes(value) || filterIngredients(formatedRecipe.ingredients, value) || formatedRecipe.description.includes(value);
+        break;
+    case configFilters.appliance.type:
+        match = formatedRecipe.name.includes(value) || filterAppliances(formatedRecipe.appliance, value) || formatedRecipe.description.includes(value);
+        break;
+    case configFilters.ustensil.type:
+        match = formatedRecipe.name.includes(value) || filterUstensils(formatedRecipe.ustensils, value) || formatedRecipe.description.includes(value);
+        break;
+    default:
+        match = formatedRecipe.name.includes(value) || filterIngredients(formatedRecipe.ingredients, value) || formatedRecipe.description.includes(value);
+    }
+    return match;
+};
+
+export const getRecipes = (recipes, filters) => {
+    let result = [];
+    for (let i = 0; i < filters.length; i++) {
+        const value = filters[i].value;
+        result = recipes.filter((recipe) => search(value, filters[i].type, recipe));
+    }
+    const resultSort = [...new Set(result)].sort();
+    return resultSort;
+};
 
 
 /**
