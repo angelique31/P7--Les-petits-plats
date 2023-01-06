@@ -5,17 +5,17 @@
  * @returns - un tableau d'ingrédients triés (sans doublons)
  */
 export const sortByIngredient = (recipes) => {
-  let data = [];
+    let data = [];
 
-  recipes.forEach((recipe) => {
-    recipe.ingredients.forEach((ingredient) => {
-      if (ingredient.ingredient) {
-        data.push(ingredient.ingredient);
-      }
+    recipes.forEach((recipe) => {
+        recipe.ingredients.forEach((ingredient) => {
+            if (ingredient.ingredient) {
+                data.push(ingredient.ingredient);
+            }
+        });
     });
-  });
-  let ingredientSort = [...new Set(data)].sort();
-  return ingredientSort;
+    let ingredientSort = [...new Set(data)].sort();
+    return ingredientSort;
 };
 
 /**
@@ -33,14 +33,14 @@ export const sortByAppliance = (recipes) => {
     }
     let applianceSort = [...new Set(data)].sort();
     return applianceSort;
-  };
+};
   
-  /**
+/**
  * Trier les ustensils en enlevant les doublons
  * @param {*} recipes 
  * @returns un tableau d'ustensils triés (sans doublons)
  */
-  export const sortByUstensile = (recipes) => {
+export const sortByUstensile = (recipes) => {
     let data = [];
   
     recipes.forEach((recipe) => {
@@ -52,4 +52,4 @@ export const sortByAppliance = (recipes) => {
     });
     let ustensileSort = [...new Set(data)].sort();
     return ustensileSort;
-  };
+};

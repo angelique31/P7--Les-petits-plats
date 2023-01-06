@@ -1,8 +1,8 @@
-import displayRecipes from "../recipes";
-import { formatText } from "../../utils/format";
-import filtersList from "../filters/filtersList/filtersList";
+import displayRecipes from '../recipes';
+import { formatText } from '../../utils/format';
+import filtersList from '../filters/filtersList/filtersList';
 
-let searchInput = document.querySelector("#search_input");
+let searchInput = document.querySelector('#search_input');
 
 /**
  * Fonction qui filtre les cartes en fonction de ce qui est tapé dan la barre de recherche
@@ -14,7 +14,6 @@ function search (recipes) {
         const inputLetters = formatText(e.target.value);
         if (inputLetters.length > 2 ) {
             const filterIngredients = (ingredients) => {
-                // console.log(ingredients)
                 return ingredients.find(item => formatText(item.ingredient).includes(inputLetters));
             };
             result = recipes.filter(recipe => {
@@ -31,8 +30,6 @@ function search (recipes) {
                 return match;
 
             });
-            // console.log(result);
-
             displayRecipes(result); //fonction appelée qui permet le tri des cartes des recettes
             filtersList(result);
         }

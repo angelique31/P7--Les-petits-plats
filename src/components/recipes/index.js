@@ -1,3 +1,3 @@
-import recipesList from "./recipesList/recipesList";
+import recipesList from './recipesList/recipesList';
 
 export default recipesList;

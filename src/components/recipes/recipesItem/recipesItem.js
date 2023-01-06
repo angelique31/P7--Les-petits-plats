@@ -24,8 +24,8 @@ function recipesItem (recipe, container){
             (ingredients) =>
                 `
                 <li>
-                    <strong>${ingredients.ingredient} :</strong> ${
-    'quantity' in ingredients ? ingredients.quantity : ''
+                <strong>${ingredients.ingredient} ${'quantity' in ingredients ? ':' : ''}</strong> ${
+'quantity' in ingredients ? ingredients.quantity : ''
 } ${'unit' in ingredients ? ingredients.unit : ''}
                 `
         )

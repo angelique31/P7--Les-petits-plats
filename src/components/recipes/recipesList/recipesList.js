@@ -1,11 +1,11 @@
-import recipesItem from "../recipesItem/recipesItem";
-import recipesNotFound from "../recipesNotFound/recipesNotFound";
+import recipesItem from '../recipesItem/recipesItem';
+import recipesNotFound from '../recipesNotFound/recipesNotFound';
 
 /**
  * Fonction qui gère l'affichage des cartes des recettes
  * @param {*} recipes 
  */
- function recipesList(recipes){
+function recipesList(recipes){
     const container = document.querySelector('.recipe__section');
     container.innerHTML = '';
     const isEmpty = recipes && !recipes[0];
