@@ -17,6 +17,13 @@ Après avoir cloné le projet, il suffit d'ouvrir le fichier ./doc/index.html, p
 - Utiliser 2 branches différentes sur Git, une branche par implémentation.
 - Utiliser l’outil de comparaison de performance Jsben.ch 
 
+## Résultat de l'analyse des 2 algorithmes de la barre de recherche principale avec le Benchmark Jsbench 
+![image](https://user-images.githubusercontent.com/93211301/211055213-44601506-ba55-4d16-a3ad-76784b3db003.png)
+
+L'URL générée : https://jsben.ch/E01HF
+
+Selon les résultats de Jsbench, nous constatons que  la programmation fonctionnelle a exécuté plus d’instruction en 1 seconde que la boucle for. Il en ressort donc que l’algorithme avec la programmation fonctionnelle est plus performant en terme de rapidité sur notre cas (50 recettes).
+
 ## Validation avec W3C du projet
 ![image](https://user-images.githubusercontent.com/93211301/210443003-9fc16f37-2ea4-4e71-b8d8-34ed4a0d92a9.png)
 
