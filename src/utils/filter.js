@@ -100,6 +100,12 @@ const search = (value, type, recipe) => {
     return match;
 };
 
+/**
+ * Filte les recettes
+ * @param {*} recipes - Liste de recettes à filtrer
+ * @param {*} filters - Liste de filtres à appliquer
+ * @returns 
+ */
 export const getRecipes = (recipes, filters) => {
     let result = [];
     for (let i = 0; i < filters.length; i++) {

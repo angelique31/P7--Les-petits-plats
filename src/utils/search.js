@@ -72,7 +72,7 @@ export const searchButtonsInput = (recipes) => {
 
 const inputSearchAppliance = document.querySelector('.appliance-list');
 /**
- * Fonction qui filtre les appareils en fonction de ce qui est tapé dans l'input ingredient
+ * Fonction qui filtre les appareils en fonction de ce qui est tapé dans l'input appareil
  * @param {*} recipes
  */
 export const searchButtonsInputAppliance = (recipes) => {
@@ -137,7 +137,7 @@ export const searchButtonsInputAppliance = (recipes) => {
 
 const inputSearchUstensil = document.querySelector('.ustensil-list');
 /**
- * Fonction qui filtre les appareils en fonction de ce qui est tapé dans l'input appareil
+ * Fonction qui filtre les appareils en fonction de ce qui est tapé dans l'input ustensil
  * @param {*} recipes
  */
 export const searchButtonsInputUstensil = (recipes) => {
